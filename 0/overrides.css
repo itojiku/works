@@ -1,0 +1,28 @@
+.hero-portrait,.tilt-card,.reel-media{cursor:default;border:0}
+.upload-hint{display:none}
+.figure-placeholder:before,.portrait-placeholder:before,.reel-placeholder:before{content:'MEDIA'}
+
+/* Landing page: crisp type sits behind the portrait. */
+.hero-portrait{z-index:5}
+.kinetic-name{z-index:3;font-size:clamp(5rem,14vw,15rem);line-height:.76;letter-spacing:-.045em}
+.kinetic-name b{font-weight:800}
+
+/* Keep Nabajit's introduction with the About heading, on the left. */
+.about-copy{display:block;margin-left:8vw;margin-right:0}
+.about-copy > div{width:min(42vw,490px);margin-top:3vw}
+.about-copy > div p{font-size:14px}
+
+@media(max-width:700px){
+  .kinetic-name{font-size:18vw;line-height:.78;letter-spacing:-.035em}
+  .about-copy{margin-left:0}
+  .about-copy > div{width:72%;margin-top:8vw}
+}
+
+/* Larger portfolio images for a more editorial presentation. */
+.coverflow{height:590px}
+.flow-card{width:320px;height:460px;margin-left:-160px}
+
+@media(max-width:700px){
+  .coverflow{height:475px}
+  .flow-card{width:230px;height:345px;margin-left:-115px}
+}

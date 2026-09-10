@@ -1,0 +1,42 @@
+/* Contact links replace the former circular CTA. */
+.contact-actions { margin-top: 7vw; width: min(100%, 720px); border-top: 1px solid rgba(255,255,255,.45); }
+.contact-actions a { color: white; text-decoration: none; display: flex; justify-content: space-between; align-items: center; padding: 24px 2px; border-bottom: 1px solid rgba(255,255,255,.45); font: 800 clamp(2.5rem, 6vw, 6rem)/.85 'Big Shoulders Display', Impact, sans-serif; letter-spacing: -.025em; transition: padding .25s ease, background .25s ease, color .25s ease; }
+.contact-actions a:hover { background: white; color: #080808; padding-inline: 16px; }
+.contact-actions b { font: 400 1.6rem Inter, sans-serif; }
+
+/* The specialties strip belongs to — and stays attached to — the hero image. */
+.hero .marquee { position: absolute; z-index: 8; bottom: 0; left: 0; width: 100%; background: white; }
+
+/* Final mobile polish only; all desktop styling remains untouched. */
+@media (max-width: 700px) {
+  /* Center the portrait on phones; its lower edge touches the specialty strip. */
+  .hero { height: 100svh; min-height: 620px; padding: 0 5vw; }
+  /* The transparent hero PNG stays whole on phones: no cover crop. */
+  .hero-portrait { top: auto; bottom: 54px; width: 130vw; height: 130vw; max-height: calc(100svh - 54px); transform: translateX(-50%); overflow: visible; }
+  .hero-portrait img { object-fit: contain; object-position: center bottom; }
+  .kinetic-name { position: absolute; top: 30svh; left: 0; width: 100%; font-size: 17.4vw; line-height: .79; }
+  .hero-kicker { bottom: 7svh; }
+  .scroll-down { bottom: 7svh; }
+  .ico-scene { transform: scale(.92) translateY(-11svh); opacity: .52; }
+  .hero .marquee { bottom: 0; height: 54px; display: flex; align-items: center; padding: 0; }
+
+  /* Phone-only swipe gallery. The desktop coverflow remains unchanged. */
+  .coverflow { display: none; }
+  .portfolio-grid { display: flex; gap: 12px; margin: 0 -5vw; padding: 0 5vw 10px; overflow-x: auto; overscroll-behavior-x: contain; scroll-snap-type: x mandatory; scrollbar-width: none; }
+  .portfolio-grid::-webkit-scrollbar { display: none; }
+  .grid-card { flex: 0 0 82vw; aspect-ratio: .72; scroll-snap-align: center; }
+
+  .contact { padding-bottom: 18vw; }
+  .magnetic-button { display: none; }
+  .contact-actions { margin-top: 14vw; border-top: 1px solid rgba(255,255,255,.45); }
+  .contact-actions a { color: white; text-decoration: none; display: flex; justify-content: space-between; align-items: center; padding: 20px 2px; border-bottom: 1px solid rgba(255,255,255,.45); font: 800 clamp(2.35rem, 11vw, 4.5rem)/.85 'Big Shoulders Display', Impact, sans-serif; letter-spacing: -.025em; }
+  .contact-actions b { font: 400 1.4rem Inter, sans-serif; }
+}
+
+@media (max-width: 700px) {
+  .hero-portrait {
+    width: 130vw !important;
+    height: 130vw !important;
+    max-height: none !important;
+  }
+}

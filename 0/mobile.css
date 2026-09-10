@@ -1,0 +1,30 @@
+/* Mobile-only styles: desktop layout and typography are intentionally untouched. */
+@media (max-width: 700px) {
+  html, body { overflow-x: hidden; }
+  .nav { padding: 18px 5vw; }
+  .hero { min-height: 100svh; padding: 74px 5vw 28px; }
+  .ico-scene { opacity: .5; transform: scale(.76); }
+  .hero-portrait { width: 64vw; height: 57svh; bottom: -1%; }
+  .kinetic-name { width: 100%; font-size: 17vw; line-height: .8; letter-spacing: -.035em; }
+  .hero-kicker { left: 5vw; bottom: 5vw; font-size: 8px; }
+  .scroll-down { right: 5vw; bottom: 5vw; font-size: 8px; }
+  .section { padding: 20vw 5vw; }
+  .marquee { padding: 13px 0; }
+  .about { min-height: auto; }
+  .about-copy { margin: 18vw 0 0; }
+  .about-copy > div { width: 74%; margin-top: 7vw; }
+  .about-copy > div p { font-size: 12px; line-height: 1.65; }
+  .tilt-card { width: 58vw; margin-top: 12vw; }
+  .portfolio { min-height: auto; padding-bottom: 18vw; }
+  .section-head { gap: 18px; align-items: flex-start; }
+  .instruction { max-width: 110px; text-align: right; line-height: 1.45; }
+  .portfolio h2 { margin: 15vw 0 8vw; }
+  .coverflow { display: none; }
+  .portfolio-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 8px; margin-top: 0; }
+  .grid-card { aspect-ratio: .72; }
+  .flow-label { font-size: 8px; }
+  .contact { min-height: 72svh; padding-top: 19vw; }
+  .availability { margin: 17vw 0 12vw; font-size: clamp(2.2rem, 12vw, 4.5rem); }
+  .magnetic-button { width: 150px; height: 150px; }
+  footer { padding: 18px 5vw; font-size: 8px; }
+}
